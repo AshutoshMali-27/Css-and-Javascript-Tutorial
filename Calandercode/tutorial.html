@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <div class="container">
+        <!-- <div class="items item1-container" id="grid-id1">
+            <div class="nested-div">
+Grid6
+            </div>
+            <div class="nested-div">
+                Grid4
+            </div>
+            <div class="nested-div">
+                Grid5  
+            </div>
+        </div>
+        <div class="items">Grid2</div>
+        <div class="items">Grid3</div>
+        <div class="items">Grid4</div>
+        <div class="items">Grid5</div> -->
+
+        <!-- <div class="griditem">1</div>
+        <div class="griditem">2</div>
+        <div class="griditem">3</div>
+        <div class="griditem">4</div>
+        <div class="griditem">5</div>
+        <div class="griditem">6</div>
+        <div class="griditem">7</div>
+        <div class="griditem">8</div>
+        <div class="griditem">9</div>
+
+    </div>  -->
+
+
+    <form>
+        <label for="calendar">Select a date:</label>
+        <input type="date" id="calendar" name="calendar" required>
+
+        <label for="year">Select a year:</label>
+        <select id="year" name="year" oninput="updateCalendarConstraints()">
+            <!-- Dynamically generate the year options using JavaScript -->
+        </select>
+
+    </form>
+</body>
+
+<script>
+    // Fetch the current year
+    const currentYear = new Date().getFullYear();
+
+    // Populate the year dropdown with a range of years, e.g., from currentYear to currentYear + 8
+    const yearDropdown = document.getElementById('year');
+    for (let i = currentYear; i <= currentYear + 8; i++) {
+        const option = document.createElement('option');
+        option.value = i;
+        option.text = i;
+        yearDropdown.add(option);
+    }
+
+    // Function to update the calendar input constraints based on the selected year
+    function updateCalendarConstraints() {
+        const selectedYear = yearDropdown.value;
+
+        // Set the minimum and maximum attributes for the calendar input
+        const calendarInput = document.getElementById('calendar');
+        calendarInput.min = `${selectedYear}-01-01`;
+        calendarInput.max = `${selectedYear}-12-31`;
+    }
+
+    // Initial call to set the calendar constraints for the current year
+    updateCalendarConstraints();
+</script>
+
+
+</html>
