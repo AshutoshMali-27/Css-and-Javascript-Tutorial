@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+     <!-- Include jQuery -->
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
     <!-- <div class="container">
@@ -37,44 +39,42 @@ Grid6
     </div>  -->
 
 
-    <form>
         <label for="calendar">Select a date:</label>
         <input type="date" id="calendar" name="calendar" required>
 
         <label for="year">Select a year:</label>
-        <select id="year" name="year" oninput="updateCalendarConstraints()">
-            <!-- Dynamically generate the year options using JavaScript -->
+        <select id="year" name="year">
+            <!-- Dynamically generate the year options using jQuery -->
         </select>
 
-    </form>
-</body>
 
+</body>
 <script>
     // Fetch the current year
     const currentYear = new Date().getFullYear();
 
     // Populate the year dropdown with a range of years, e.g., from currentYear to currentYear + 8
-    const yearDropdown = document.getElementById('year');
     for (let i = currentYear; i <= currentYear + 8; i++) {
-        const option = document.createElement('option');
-        option.value = i;
-        option.text = i;
-        yearDropdown.add(option);
+        $('#year').append($('<option>', {
+            value: i,
+            text: i
+        }));
     }
 
     // Function to update the calendar input constraints based on the selected year
     function updateCalendarConstraints() {
-        const selectedYear = yearDropdown.value;
+        const selectedYear = $('#year').val();
 
         // Set the minimum and maximum attributes for the calendar input
-        const calendarInput = document.getElementById('calendar');
-        calendarInput.min = `${selectedYear}-01-01`;
-        calendarInput.max = `${selectedYear}-12-31`;
+        $('#calendar').attr('min', `${selectedYear}-01-01`);
+        $('#calendar').attr('max', `${selectedYear}-12-31`);
     }
 
     // Initial call to set the calendar constraints for the current year
     updateCalendarConstraints();
-</script>
 
+    // Bind the updateCalendarConstraints function to the change event of the year dropdown
+    $('#year').on('input', updateCalendarConstraints);
+</script>
 
 </html>
