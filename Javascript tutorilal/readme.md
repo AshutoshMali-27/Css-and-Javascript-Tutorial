@@ -114,3 +114,34 @@ innerText: returns the text content of the element and all its children
 innerHTML: returns the plain text of HTMl contents in the element
 
 textContent: returns textual content even for hidden element 
+
+getAttribute(attr) -: to get attribute value;
+
+setAttribute(attr,value)-: to set attribute value
+
+
+let el=document.createElement("div");
+node.append(el) //add at the end of the node(inside);
+
+node.prepend(el) //add at the start of node (inside);
+
+node.before(el) //add before the node (outside);
+
+node.after(el) //adds after the node(outside);
+
+
+delete element-:
+node.remove() //removes the node and all its children;
+
+
+event in JS
+
+the change in the state of an object is known as an event
+
+event are fired to notify code of intresting changes that may affect code execution.
+
+
+mouse events (click ,double click);
+keyboard events(keypress,keyup,keydown);
+form event(submit);
+print event and many more;

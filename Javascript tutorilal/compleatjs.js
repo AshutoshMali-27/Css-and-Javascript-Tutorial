@@ -100,4 +100,5 @@ const output1 =arr2.reduce((res,curr)=>{
     return res+curr;
 })
 
-console.log(output1);
+//console.log(output1); 
+

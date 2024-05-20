@@ -11,3 +11,24 @@
     background-color: green;
     color: white;
  }
+
+ #box{
+   height: 100px;
+   width: 100px;background-color: aqua;
+   color:white;
+   border: 1px solid black;
+ }
+
+ .mydiv{
+   height: 300px;
+   width: 300px;
+background-color: blueviolet;   
+ }
+
+ .mybox{
+   height: 100px;
+   width: 100px;
+   background-color: dodgerblue;
+   color: white;
+   border: 1px solid black;
+ }
