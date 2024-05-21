@@ -145,3 +145,12 @@ mouse events (click ,double click);
 keyboard events(keypress,keyup,keydown);
 form event(submit);
 print event and many more;
+
+
+prototypes in JS
+-A javascript object is an entity having state and behavior (properites and method).
+-JS objects have special property called prototype.
+-we can set prototype using __proto__
+
+-if iobject and prototype have same method ,object method will use.
+
