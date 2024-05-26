@@ -1,7 +1,7 @@
 what is js ?
 js is programming language .we use it to give instruction to the computer .
 
-console.lohg("ashutosh mali")
+console.log("ashutosh mali")
 
 it is use to log a massage to the console.
 
@@ -154,3 +154,53 @@ prototypes in JS
 
 -if iobject and prototype have same method ,object method will use.
 
+
+
+this= object refer itsself;
+
+
+
+synchronous 
+ synchornus means the code run in a perticular sequence of instruction given in the program each instruction waits for the previous instruction to compleat its execution
+
+
+ Asynchrounos 
+
+ due to synchronous programming .sometimes imp instructions get blocked due to some previous instruction which causes a delay in UI Asynchronous code execution allows to execute next instruction immediately and doesnt block the flow .
+
+
+ callback hell
+
+ nested callbacks stacked below one another forming a pyramid strecture .
+ (pyramid of doom)
+
+ this style of programming become diffcult to understand and manage.
+
+
+promise 
+apromise od form eventual completion of task .it is an object in ja .it is a solutrion to callback hell .
+
+let promise =new promise((resolve,reject)={
+
+})
+
+promise -pending ,fulfiled ,reject
+
+
+
+FETCH API
+
+the fetch api provides an interface for fetching (sending/receiving) resouces.
+
+it uses Request and response objects
+
+the fetch() method is used to fetch a resource(data).
+ 
+
+ ajax is a asynchronous JS and XML
+ JSON is Javascript Object Notation
+ json() method: return a second promise that resolve with the result of parsing the response body text as json 
+
+
+
+ httpresponse header also conatin detail about the response such as content type http status code etc.
